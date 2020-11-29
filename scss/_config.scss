@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
+$font-stack: "DM Sans", sans-serif;
+$primery-color-1: #000000;
+$primery-color-2: #ffffff;
+$primery-color-3: #dfdfdf;
+$main-accent-1: #ffc593;
+$main-accent-2: #bc7198;
+$main-accent-3: #5a77ff;
+$large-font-size: 50px;
+$semi-large-font-size: 24px;
+$mid-font-size: 18px;
+$small-font-size: 12px;
+$body-font-size: 15px;
+
+:root {
+  font-size: $body-font-size;
+  font-family: $font-stack;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.hide {
+  display: none;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.5fr;
+  width: 80%;
+  margin: 0 auto;
+  padding: 0.7em 0;
+  align-items: center;
+  .hide-desktop {
+    display: none;
+  }
+  ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-evenly;
+    justify-items: center;
+    padding: 0;
+
+    a {
+      color: $primery-color-1;
+      text-decoration: none;
+      transition: all 0.2s;
+      text-transform: uppercase;
+      &:hover {
+        color: $primery-color-3;
+        transition: all 0.2s;
+      }
+    }
+  }
+  button {
+    text-transform: uppercase;
+    justify-self: right;
+    border: none;
+    color: $primery-color-2;
+    background-color: $primery-color-1;
+    padding: 0;
+    transition: all 0.3s;
+    padding: 1.5em 2em;
+    &:hover {
+      color: $primery-color-1;
+      background-color: $primery-color-3;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+  }
+}
+footer {
+  background-color: $primery-color-1;
+  padding: 5em;
+  color: $primery-color-2;
+  .footer-bg {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.8fr 1fr 0.8fr;
+    .left {
+      .bottom {
+        margin-top: 6em;
+        img:hover {
+          cursor: pointer;
+          transform: scale(1.2);
+        }
+        img {
+          padding-right: 1em;
+        }
+      }
+    }
+    .middle {
+      justify-self: center;
+      text-align: center;
+      ul {
+        list-style: none;
+        margin-top: 0;
+        padding: 0;
+        a {
+          color: $primery-color-2;
+          text-decoration: none;
+          text-transform: uppercase;
+          &:hover {
+            opacity: 60%;
+          }
+        }
+        li {
+          margin-bottom: 1em;
+        }
+      }
+    }
+    .right {
+      text-align: right;
+      button {
+        background-color: transparent;
+        color: $primery-color-2;
+        border: none;
+        text-transform: uppercase;
+        padding-right: 2em;
+        span {
+          margin-left: 1em;
+        }
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+      p {
+        margin-top: 6em;
+        opacity: 60%;
+      }
+    }
+  }
+}
+
+@media (max-width: 968px) {
+  footer {
+    .footer-bg {
+      grid-template-columns: 1fr 1fr;
+      width: 100%;
+      .right {
+        grid-column: 2/3;
+        justify-self: end;
+      }
+      .left {
+        .bottom {
+          margin-top: 1em;
+        }
+      }
+      .middle {
+        justify-self: left;
+        text-align: left;
+
+        margin-top: 2em;
+        grid-column: 1/2;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    grid-template-columns: 1fr;
+    .hide-desktop {
+      display: block;
+      grid-column: 3/4;
+      justify-self: right;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    width: 90%;
+    .show-desktop {
+      display: none;
+    }
+    ul {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-self: center;
+      a {
+        margin-top: 1em;
+      }
+    }
+    .hide-mobile {
+      display: none;
+      transform: scale(0);
+      transition: all 0.5s;
+    }
+    button {
+      display: none;
+    }
+  }
+  footer {
+    text-align: center;
+    .footer-bg {
+      display: block;
+      ul {
+        margin-top: 3em;
+        padding: 0;
+      }
+      .right {
+        text-align: center;
+        margin-top: 3em;
+        p {
+          margin-top: 1em;
+        }
+      }
+      .middle {
+        text-align: center;
+      }
+    }
+  }
+}

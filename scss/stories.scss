@@ -1,0 +1,243 @@
+@import "_config";
+
+.landing {
+  position: relative;
+  margin-bottom: -1em;
+  .hero {
+    height: 800px;
+    width: 100%;
+  }
+  &-left {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    color: $primery-color-2;
+    font-size: 1.3rem;
+    .last {
+      text-transform: uppercase;
+    }
+    .head {
+      font-size: 60px;
+      width: 30%;
+      margin: 0.5em 0;
+    }
+    .date {
+      font-size: 1rem;
+      span {
+        opacity: 75%;
+      }
+    }
+    .sub-head {
+      opacity: 60%;
+      width: 40%;
+    }
+    button {
+      background-color: transparent;
+      color: $primery-color-2;
+      border: none;
+      margin-top: 2em;
+      font-size: 20px;
+      text-transform: uppercase;
+      padding-right: 2em;
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.gallry {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  .card {
+    .bg {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+    }
+    height: 500px;
+    transition: all 0.5s;
+    &:hover {
+      cursor: pointer;
+      transform: translate(0, -20px);
+      transition: 0.5s;
+      .bg {
+        border-bottom: 10px solid;
+        border-image: linear-gradient(
+          to right,
+          $main-accent-1,
+          $main-accent-2,
+          $main-accent-3
+        );
+        border-image-slice: 1;
+        filter: brightness(100%);
+        transition: all 0.2s;
+      }
+      .info {
+        transition: all 0.2s;
+        transform: translate(0, -20px);
+      }
+    }
+    .bg {
+      object-fit: cover;
+      width: 100%;
+      height: 500px;
+      filter: brightness(50%);
+    }
+    .info {
+      position: relative;
+      bottom: 150px;
+      left: 50px;
+      color: $primery-color-2;
+      width: max-content;
+      display: grid;
+      align-content: left;
+      p {
+        margin: 0;
+      }
+      .title {
+        font-size: 1.5rem;
+      }
+      .author {
+        margin-bottom: 1.5em;
+        font-size: 0.8rem;
+        border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.2);
+        width: 75%;
+        padding-bottom: 1em;
+      }
+      .read-story {
+        span {
+          padding-left: 2em;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1500px) {
+  .landing {
+    .hero {
+      height: 600px;
+    }
+    &-left {
+      font-size: 12px;
+      .head {
+        font-size: 40px;
+        line-height: 1.2;
+      }
+      .sub-head {
+        font-size: 20px;
+      }
+    }
+  }
+}
+@media (max-width: 1050px) {
+  .landing {
+    .hero {
+      height: 500px;
+    }
+    &-left {
+      position: absolute;
+      top: 10%;
+      left: 10%;
+      color: $primery-color-2;
+      font-size: 1rem;
+      .last {
+        font-size: 15px;
+        text-transform: uppercase;
+      }
+      .head {
+        font-size: 28px;
+        width: 30%;
+        margin: 0.5em 0;
+      }
+      .date {
+        font-size: 0.8rem;
+        span {
+          opacity: 75%;
+        }
+      }
+      .sub-head {
+        font-size: 1rem;
+        opacity: 60%;
+        width: 40%;
+      }
+      button {
+        background-color: transparent;
+        color: $primery-color-2;
+        border: none;
+        margin-top: 1em;
+        font-size: 15px;
+        text-transform: uppercase;
+        padding-right: 2em;
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .gallry {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 840px) {
+  .landing {
+    .hero {
+      height: 400px;
+    }
+    &-left {
+      .head {
+        font-size: 25px;
+        line-height: 1.2;
+        width: 70%;
+      }
+      .sub-head {
+        width: 70%;
+        font-size: 15px;
+      }
+    }
+  }
+  .gallry {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 620px) {
+  .landing {
+    .hero {
+      height: 300px;
+    }
+    &-left {
+      .last {
+        font-size: 0.8rem;
+      }
+      .head {
+        font-size: 25px;
+        line-height: 1.2;
+        width: 90%;
+      }
+      .sub-head {
+        width: 90%;
+        font-size: 11px;
+      }
+    }
+  }
+  .gallry {
+    grid-template-columns: 1fr;
+    .card {
+      height: 300px;
+      .bg {
+        height: 300px;
+      }
+    }
+  }
+}
+
+@media (min-width: 2000px) {
+  .landing {
+    .hero {
+      height: 900px;
+    }
+  }
+}
