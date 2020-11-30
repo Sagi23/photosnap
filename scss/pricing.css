@@ -30,6 +30,11 @@ nav .hide-desktop {
   display: none;
 }
 
+nav #ul {
+  display: -ms-grid;
+  display: grid;
+}
+
 nav ul {
   display: -ms-grid;
   display: grid;
@@ -191,6 +196,9 @@ footer .footer-bg .right p {
         grid-template-columns: 1fr;
     width: 90%;
   }
+  nav #ul {
+    display: none;
+  }
   nav .hide-desktop {
     display: block;
     -ms-grid-column: 3;
@@ -265,6 +273,12 @@ footer .footer-bg .right p {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  border-left: 6px solid;
+  -o-border-image: linear-gradient(#ffc593, #bc7198, #5a77ff);
+     border-image: -webkit-gradient(linear, left top, left bottom, from(#ffc593), color-stop(#bc7198), to(#5a77ff));
+     border-image: linear-gradient(#ffc593, #bc7198, #5a77ff);
+  border-image-slice: 1;
+  border-image-outset: 0 5em;
 }
 
 .landing-left .head {
@@ -347,6 +361,7 @@ footer .footer-bg .right p {
 .cards .card .price {
   font-size: 2.5rem;
   letter-spacing: 2.5px;
+  font-weight: 700;
 }
 
 .cards .card button {
@@ -470,6 +485,11 @@ footer .footer-bg .right p {
   background-repeat: no-repeat;
   background-size: cover;
   color: #ffffff;
+  border-left: 6px solid;
+  -o-border-image: linear-gradient(#ffc593, #bc7198, #5a77ff);
+     border-image: -webkit-gradient(linear, left top, left bottom, from(#ffc593), color-stop(#bc7198), to(#5a77ff));
+     border-image: linear-gradient(#ffc593, #bc7198, #5a77ff);
+  border-image-slice: 1;
 }
 
 .banner {

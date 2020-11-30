@@ -16,5 +16,3 @@ menuBtn.addEventListener("click", function () {
     }, 400);
   }
 });
-
-console.log(window.innerWidth);
