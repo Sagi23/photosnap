@@ -30,11 +30,6 @@ nav .hide-desktop {
   display: none;
 }
 
-nav #ul {
-  display: -ms-grid;
-  display: grid;
-}
-
 nav ul {
   display: -ms-grid;
   display: grid;
@@ -196,9 +191,6 @@ footer .footer-bg .right p {
         grid-template-columns: 1fr;
     width: 90%;
   }
-  nav #ul {
-    display: none;
-  }
   nav .hide-desktop {
     display: block;
     -ms-grid-column: 3;
@@ -304,7 +296,11 @@ footer .footer-bg .right p {
   margin-top: 2em;
   font-size: 20px;
   text-transform: uppercase;
-  padding-right: 2em;
+  padding-left: 0;
+}
+
+.landing-left button img {
+  padding-left: 1em;
 }
 
 .landing-left button:hover {

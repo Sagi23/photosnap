@@ -30,11 +30,6 @@ nav .hide-desktop {
   display: none;
 }
 
-nav #ul {
-  display: -ms-grid;
-  display: grid;
-}
-
 nav ul {
   display: -ms-grid;
   display: grid;
@@ -195,9 +190,6 @@ footer .footer-bg .right p {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     width: 90%;
-  }
-  nav #ul {
-    display: none;
   }
   nav .hide-desktop {
     display: block;

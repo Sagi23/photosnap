@@ -30,11 +30,6 @@ nav .hide-desktop {
   display: none;
 }
 
-nav #ul {
-  display: -ms-grid;
-  display: grid;
-}
-
 nav ul {
   display: -ms-grid;
   display: grid;
@@ -196,9 +191,6 @@ footer .footer-bg .right p {
         grid-template-columns: 1fr;
     width: 90%;
   }
-  nav #ul {
-    display: none;
-  }
   nav .hide-desktop {
     display: block;
     -ms-grid-column: 3;
@@ -313,6 +305,9 @@ footer .footer-bg .right p {
           justify-content: center;
   gap: 1em;
   margin-top: 3em;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .toggle-bar span #toggle-image:hover {
@@ -320,8 +315,7 @@ footer .footer-bg .right p {
 }
 
 .checked {
-  font-weight: 700;
-  font-size: 1.1rem;
+  color: #000000;
 }
 
 .cards {
@@ -375,6 +369,8 @@ footer .footer-bg .right p {
 
 .cards .card button:hover {
   cursor: pointer;
+  background-color: #dfdfdf;
+  color: #000000;
 }
 
 .cards .card-left {
@@ -582,8 +578,8 @@ footer .footer-bg .right p {
     margin: 2em auto;
   }
   .cards .card-middle {
-    -webkit-transform: scale(0.98, 1);
-            transform: scale(0.98, 1);
+    -webkit-transform: scale(0.989, 1);
+            transform: scale(0.989, 1);
     border-top: none;
     border-left: 10px solid;
     -o-border-image: linear-gradient(#ffc593, #bc7198, #5a77ff);

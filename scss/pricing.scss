@@ -45,6 +45,9 @@
   justify-content: center;
   gap: 1em;
   margin-top: 3em;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: rgba(0, 0, 0, 0.4);
   span {
     #toggle-image:hover {
       cursor: pointer;
@@ -52,8 +55,7 @@
   }
 }
 .checked {
-  font-weight: 700;
-  font-size: 1.1rem;
+  color: $primery-color-1;
 }
 
 .cards {
@@ -93,6 +95,8 @@
       margin-top: 3em;
       &:hover {
         cursor: pointer;
+        background-color: $primery-color-3;
+        color: $primery-color-1;
       }
     }
     &-left {
@@ -246,7 +250,7 @@
         margin: 2em auto;
       }
       &-middle {
-        transform: scale(0.98, 1);
+        transform: scale(0.989, 1);
         border-top: none;
         border-left: 10px solid;
         border-image: linear-gradient(

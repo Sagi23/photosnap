@@ -36,9 +36,6 @@ nav {
   .hide-desktop {
     display: none;
   }
-  #ul {
-    display: grid;
-  }
   ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -166,9 +163,6 @@ footer {
 
 @media (max-width: 600px) {
   nav {
-    #ul {
-      display: none;
-    }
     grid-template-columns: 1fr;
     .hide-desktop {
       display: block;
