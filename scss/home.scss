@@ -9,7 +9,7 @@
     width: 80%;
     justify-self: right;
     align-self: center;
-    padding: 7em 0;
+    margin: 7em 0;
     border-left: 6px solid;
     border-image: linear-gradient(
       $main-accent-1,
@@ -37,7 +37,7 @@
       background-color: transparent;
       color: $primery-color-2;
       border: none;
-      margin-top: 2em;
+      margin: 2em 0;
       font-size: 20px;
       text-transform: uppercase;
       padding-right: 2em;
