@@ -9,10 +9,6 @@ body {
   padding: 0;
 }
 
-.hide {
-  display: none;
-}
-
 nav {
   display: -ms-grid;
   display: grid;
@@ -24,10 +20,6 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-nav .hide-desktop {
-  display: none;
 }
 
 nav ul {
@@ -74,6 +66,24 @@ nav button:hover {
   background-color: #dfdfdf;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  cursor: pointer;
+}
+
+.hide-desktop {
+  display: none;
+}
+
+.hide-mobile {
+  display: -ms-grid;
+  display: grid;
+  padding: 0.5em 0;
+}
+
+#menu {
+  float: right;
+}
+
+#menu:hover {
   cursor: pointer;
 }
 
@@ -186,44 +196,7 @@ footer .footer-bg .right p {
 }
 
 @media (max-width: 600px) {
-  nav {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    width: 90%;
-  }
-  nav .hide-desktop {
-    display: block;
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 1;
-    grid-column: 3/4;
-    -ms-grid-column-align: right;
-        justify-self: right;
-  }
-  nav .hide-desktop:hover {
-    cursor: pointer;
-  }
-  nav .show-desktop {
-    display: none;
-  }
-  nav ul {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -ms-grid-column-align: center;
-        justify-self: center;
-  }
-  nav ul a {
-    margin-top: 1em;
-  }
-  nav .hide-mobile {
-    display: none;
-    -webkit-transform: scale(0);
-            transform: scale(0);
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-  }
-  nav button {
+  button {
     display: none;
   }
   footer {
@@ -245,6 +218,36 @@ footer .footer-bg .right p {
   }
   footer .footer-bg .middle {
     text-align: center;
+  }
+  nav {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    width: 90%;
+  }
+  .hide-desktop {
+    display: block;
+    padding: 1.3em 0;
+  }
+  ul {
+    display: -ms-grid;
+    display: grid;
+    text-align: center;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  ul li {
+    margin-top: 1em;
+  }
+  ul a {
+    margin-top: 1em;
+  }
+  .hide-mobile {
+    display: none;
+  }
+  .hide {
+    display: none !important;
   }
 }
 

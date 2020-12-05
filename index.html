@@ -9,17 +9,23 @@
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="hide-mobile">
         <a href="index.html"
           ><img src="/assets/shared/desktop/logo.svg" alt="logo"
         /></a>
-        <img
-          class="hide-desktop"
-          src="/assets/shared/mobile/menu.svg"
-          alt="menu"
-          id="menu"
-        />
-        <ul id="ul" class="hide-mobile test show-desktop">
+        <ul>
+          <a href="stories.html">Stories</a>
+          <a href="features.html">Features</a>
+          <a href="pricing.html">Pricing</a>
+        </ul>
+        <button>Get an invite</button>
+      </nav>
+      <nav class="hide-desktop">
+        <a href="index.html"
+          ><img src="/assets/shared/desktop/logo.svg" alt="logo"
+        /></a>
+        <img src="/assets/shared/mobile/menu.svg" alt="menu" id="menu" />
+        <ul id="ul" class="hide">
           <a href="stories.html">Stories</a>
           <a href="features.html">Features</a>
           <a href="pricing.html">Pricing</a>
