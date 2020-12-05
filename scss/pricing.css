@@ -404,6 +404,10 @@ footer .footer-bg .right p {
       justify-self: left;
 }
 
+.change {
+  display: none;
+}
+
 .chart {
   margin: 12em 0;
 }
